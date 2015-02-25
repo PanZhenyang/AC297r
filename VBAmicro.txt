@@ -1,0 +1,20 @@
+Sub Macro1()
+'
+' Download Data
+'
+
+'
+For i = 0 To 300 Step 3
+    Columns(i + 18).Select
+    Selection.Insert Shift:=xlToRight
+    Selection.Insert Shift:=xlToRight
+    
+    Cells(5, i + 16).Select
+    Selection.Copy
+    Cells(5, i + 19).Select
+    ActiveSheet.Paste
+    
+
+Next i
+
+End Sub
